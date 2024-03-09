@@ -1,0 +1,8 @@
+:root {
+  --font-color: rgb(60, 60, 60);
+  --background-color: rgb(246, 246, 246);
+  --sidebar-color: rgb(240, 241, 243);
+  --hover-color: rgba(216, 216, 216, 0.742);
+  --hover-font-color: rgb(87, 79, 255);
+  --border-color: rgb(230, 230, 230);
+}
