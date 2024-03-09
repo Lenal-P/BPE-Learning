@@ -1,5 +1,3 @@
-// Sidebar.js
-
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +6,7 @@ import {
   faBook,
   faListUl,
   faBookmark,
+  faShare,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
 
@@ -24,13 +23,48 @@ function Sidebar() {
   };
 
   const articles = [
-    { id: 1, title: "Article 1", content: "Content of Article 1" },
-    { id: 2, title: "Article 2", content: "Content of Article 2" },
-    { id: 3, title: "Article 3", content: "Content of Article 3" },
-    { id: 4, title: "Article 4", content: "Content of Article 4" },
-    { id: 5, title: "Article 5", content: "Content of Article 5" },
-    { id: 6, title: "Article 6", content: "Content of Article 6" },
-
+    {
+      id: 1,
+      title: "Article 1",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Content of Article Content of Article1",
+    },
+    {
+      id: 2,
+      title: "Article 2",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Article Content of Article Content of Article Content of Article Content of Article Content of Article2",
+    },
+    {
+      id: 3,
+      title: "Article 3",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Article Content of Article Content of Article e Content of Article Content of Article3",
+    },
+    {
+      id: 4,
+      title: "Article 4",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Article Content of Article Conterticle Content of Article4",
+    },
+    {
+      id: 5,
+      title: "Article 5",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Article Content of Article Content of Article Content of Article Content of Article Content of Article5",
+    },
+    {
+      id: 6,
+      title: "Article 6",
+      images: "https://placekitten.com/500/400",
+      content:
+        "Content of Article Content of Article Content of Article Content of Articlontent of Article Content of Article6",
+    },
   ];
 
   return (
@@ -44,11 +78,26 @@ function Sidebar() {
           <a href="#articles" onClick={handleNewsListsClick}>
             <FontAwesomeIcon icon={faListUl} /> Danh sách bài viết
             {newsLists && (
-              <ul className="lists-news">
+              <ul className="lists-feeds">
                 {articles.map((article) => (
                   <li key={article.id}>
                     <strong>{article.title}</strong>
+                    <img src={article.images} alt={article.title} />
                     <p>{article.content}</p>
+                    <div className="saved-share-feeds">
+                      <a href="#saved">
+                        <FontAwesomeIcon
+                          icon={faBookmark}
+                          className="saved-share-feeds saved"
+                        />
+                      </a>
+                      <a href="#share">
+                        <FontAwesomeIcon
+                          icon={faShare}
+                          className="saved-share-feeds share"
+                        />
+                      </a>
+                    </div>
                   </li>
                 ))}
               </ul>
