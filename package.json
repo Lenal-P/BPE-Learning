@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://lenal-p.github.io/BPE-Learning",
+  "homepage": "https://lenal-p.github.io/BPE-Learning/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
